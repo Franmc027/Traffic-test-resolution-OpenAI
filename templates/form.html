@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Formulario de pregunta tipo test</title>
+    <style>
+      /* Estilos CSS */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #F9F9F9;
+      }
+      form {
+        width: 500px;
+        margin: 0 auto;
+        background-color: #FFF;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      input[type="text"],
+      input[type="radio"] {
+        margin-left: 10px;
+      }
+      input[type="submit"] {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #007AFF;
+        color: #FFF;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+      }
+      input[type="submit"]:hover {
+        background-color: #0060DF;
+      }
+    </style>
+  </head>
+  <body>
+  <h1>Preguntas tipo test</h1>
+  <p>Escribe la pregunta y las respuestas, obtendrás la respuesta correcta y el razonamiento de esta </p>
+    <form  method="POST" action="{{url_for('answer')}}">
+      <label for="pregunta">Pregunta:</label>
+      <input type="text" id="pregunta" name="pregunta" required>
+      <br>
+      <br>
+      <br>
+      <label for="respuesta1">Respuesta 1:</label>
+      <input type="text" id="texto_respuesta1" name="respuesta1" required>
+      <br>
+      <label for="respuesta2">Respuesta 2:</label>
+      <input type="text" id="texto_respuesta2" name="respuesta2" required>
+      <br>
+      <label for="respuesta3">Respuesta 3:</label>
+      <input type="text" id="texto_respuesta3" name="respuesta3" required>
+      <br>
+      <input type="submit" value="Enviar">
+    </form>
+  </body>
+</html>
